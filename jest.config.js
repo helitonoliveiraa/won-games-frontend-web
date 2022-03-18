@@ -7,4 +7,9 @@ module.exports = {
     '!src/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
+  modulePaths: ['<rootDir>'],
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1',
+  },
+  // moduleDirectories: ['node_modules', '<rootDir>'],
 };
