@@ -6,6 +6,7 @@ export default {
   component: Heading,
   args: {
     children: 'Most popular',
+    color: 'black',
   },
 } as ComponentMeta<typeof Heading>;
 
