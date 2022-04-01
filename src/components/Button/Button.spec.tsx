@@ -1,7 +1,8 @@
-import { screen } from '@testing-library/react';
 import { FiShoppingCart } from 'react-icons/fi';
+
+import { screen } from '@testing-library/react';
+
 import { renderWithTheme } from '@/utils/tests/helpers';
-import 'jest-styled-components';
 
 import { Button } from './index';
 

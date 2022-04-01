@@ -1,4 +1,5 @@
 import { ComponentMeta } from '@storybook/react';
+
 import { Heading } from './index';
 
 export default {

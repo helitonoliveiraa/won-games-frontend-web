@@ -1,5 +1,7 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { FiShoppingCart } from 'react-icons/fi';
+
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { Button } from './index';
 
 export default {

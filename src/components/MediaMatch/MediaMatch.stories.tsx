@@ -1,5 +1,6 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { MediaMatch } from './index';
 
 export default {

@@ -1,4 +1,5 @@
 import { HeadingProps } from '@/types';
+
 import * as S from './styles';
 
 export function Heading({

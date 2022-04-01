@@ -1,4 +1,5 @@
-import { ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { Logo } from './index';
 
 export default {
@@ -6,4 +7,4 @@ export default {
   component: Logo,
 } as ComponentMeta<typeof Logo>;
 
-export const Basic: typeof Logo = args => <Logo {...args} />;
+export const Basic: ComponentStory<typeof Logo> = args => <Logo {...args} />;

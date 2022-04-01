@@ -1,6 +1,6 @@
-import * as S from './styles';
-
 import { LogoProps } from '@/types';
+
+import * as S from './styles';
 
 export function Logo({
   color = 'white',
