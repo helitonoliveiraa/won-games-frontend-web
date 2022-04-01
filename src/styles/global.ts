@@ -62,4 +62,10 @@ export default createGlobalStyle`
       font-size: ${theme.font.sizes.medium};
     }
   `}
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
 `;
