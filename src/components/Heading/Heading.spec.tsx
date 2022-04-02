@@ -25,7 +25,7 @@ describe('<Heading/>', () => {
     renderWithTheme(<Heading lineLeft>won games</Heading>);
 
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
-      'border-left': '0.7rem solid #3CD3C1',
+      'border-left': '0.7rem solid #F231A5',
     });
   });
 
@@ -34,7 +34,7 @@ describe('<Heading/>', () => {
 
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyleRule(
       'border-bottom',
-      '0.4rem solid #3CD3C1',
+      '0.4rem solid #F231A5',
       {
         modifier: '::after',
       },
@@ -53,7 +53,7 @@ describe('<Heading/>', () => {
 
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyleRule(
       'border-bottom',
-      '0.4rem solid #3CD3C1',
+      '0.4rem solid #F231A5',
       {
         modifier: '::after',
       },
@@ -64,5 +64,47 @@ describe('<Heading/>', () => {
       '4.0rem',
       { modifier: '::after' },
     );
+  });
+
+  it('should render a heading with a small size', () => {
+    renderWithTheme(<Heading size="small">won games</Heading>);
+
+    expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
+      'font-size': '1.6rem',
+    });
+  });
+
+  it('should render a heading with primary line color', () => {
+    renderWithTheme(
+      <Heading lineColor="primary" lineLeft lineBottom="default">
+        lorem ipsum
+      </Heading>,
+    );
+
+    const heading = screen.getByRole('heading', { name: /lorem ipsum/i });
+
+    expect(heading).toHaveStyle({
+      'border-left': '0.7rem solid #F231A5',
+    });
+    expect(heading).toHaveStyleRule('border-bottom', '0.4rem solid #F231A5', {
+      modifier: '::after',
+    });
+  });
+
+  it('should render a heading with secondary line color', () => {
+    renderWithTheme(
+      <Heading lineColor="secondary" lineLeft lineBottom="default">
+        Lorem ipsum
+      </Heading>,
+    );
+
+    const heading = screen.getByRole('heading', { name: /lorem ipsum/i });
+
+    expect(heading).toHaveStyle({
+      'border-left': '0.7rem solid #3CD3C1',
+    });
+    expect(heading).toHaveStyleRule('border-bottom', '0.4rem solid #3CD3C1', {
+      modifier: '::after',
+    });
   });
 });

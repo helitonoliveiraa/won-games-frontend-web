@@ -1,36 +1,53 @@
 import styled, { css, DefaultTheme } from 'styled-components';
 import media from 'styled-media-query';
 
-import { HeadingProps } from '@/types';
+import { HeadingProps, LineColors } from '@/types';
+
+type LinePros = {
+  theme: DefaultTheme;
+  lineColor?: LineColors;
+};
 
 const wrapperModifiers = {
-  lineLeft: (theme: DefaultTheme) => css`
-    padding-left: ${theme.spacings.xxsmall};
-    border-left: 0.7rem solid ${theme.colors.secondary};
+  small: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.medium};
   `,
 
-  lineBottomDefault: (theme: DefaultTheme) => css`
+  medium: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.xxxlarge};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xxlarge};
+    `};
+  `,
+
+  lineLeft: ({ theme, lineColor }: LinePros) => css`
+    padding-left: ${theme.spacings.xxsmall};
+    border-left: 0.7rem solid ${theme.colors[lineColor!]};
+  `,
+
+  lineBottomDefault: ({ theme, lineColor }: LinePros) => css`
     position: relative;
     margin-bottom: ${theme.spacings.medium};
 
     &::after {
       content: '';
       width: ${theme.spacings.small};
-      border-bottom: 0.4rem solid ${theme.colors.secondary};
+      border-bottom: 0.4rem solid ${theme.colors[lineColor!]};
       position: absolute;
       left: 0;
       bottom: -${theme.spacings.xxsmall};
     }
   `,
 
-  lineBottomLarge: (theme: DefaultTheme) => css`
+  lineBottomLarge: ({ theme, lineColor }: LinePros) => css`
     position: relative;
     margin-bottom: ${theme.spacings.medium};
 
     &::after {
       content: '';
       width: ${theme.spacings.large};
-      border-bottom: 0.4rem solid ${theme.colors.secondary};
+      border-bottom: 0.4rem solid ${theme.colors[lineColor!]};
       position: absolute;
       left: 0;
       bottom: -${theme.spacings.xxsmall};
@@ -39,18 +56,14 @@ const wrapperModifiers = {
 };
 
 export const Container = styled.h2<HeadingProps>`
-  ${({ theme, color, lineLeft, lineBottom }) => css`
-    font-size: ${theme.font.sizes.xxxlarge};
+  ${({ theme, color, lineLeft, lineBottom, size, lineColor }) => css`
     color: ${theme.colors[color!]};
 
-    ${lineLeft && wrapperModifiers.lineLeft(theme)}
-
-    ${lineBottom === 'default' && wrapperModifiers.lineBottomDefault(theme)};
-
-    ${lineBottom === 'large' && wrapperModifiers.lineBottomLarge(theme)};
-
-    ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xxlarge};
-    `};
+    ${!!size && wrapperModifiers[size](theme)};
+    ${lineLeft && wrapperModifiers.lineLeft({ theme, lineColor })}
+    ${lineBottom === 'default' &&
+    wrapperModifiers.lineBottomDefault({ theme, lineColor })};
+    ${lineBottom === 'large' &&
+    wrapperModifiers.lineBottomLarge({ theme, lineColor })};
   `}
 `;
