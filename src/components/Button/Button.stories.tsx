@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Button } from './index';
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   argTypes: {
     children: {
@@ -30,4 +30,12 @@ WithIcon.args = {
   size: 'small',
   children: 'Buy now',
   icon: <FiShoppingCart />,
+};
+
+export const AsLink = Template.bind({});
+AsLink.args = {
+  size: 'large',
+  children: 'Buy now',
+  as: 'a',
+  href: '/link',
 };

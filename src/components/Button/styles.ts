@@ -26,10 +26,6 @@ const ContainerModifiers = {
     width: 100%;
   `,
   widthIcon: (theme: DefaultTheme) => css`
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
     svg {
       width: 1.8rem;
       height: 1.8rem;
@@ -43,12 +39,21 @@ const ContainerModifiers = {
 
 export const Container = styled.button<ContainerProps>`
   ${({ theme, size, fullWidth, hasIcon }) => css`
-    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: ${theme.border.radius.default};
     background: ${`linear-gradient(180deg, ${theme.colors.lightOrange} 0%, ${theme.colors.lightPink}) 50%`};
     color: ${theme.colors.white};
     padding: ${theme.spacings.xxsmall};
+    text-decoration: none;
     cursor: pointer;
+
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: ${`linear-gradient(180deg, ${theme.colors.darkOrange} 0%, ${theme.colors.darkPink})`};
+    }
 
     ${!!size && ContainerModifiers[size](theme)};
     ${fullWidth && ContainerModifiers.fullWidth()}
