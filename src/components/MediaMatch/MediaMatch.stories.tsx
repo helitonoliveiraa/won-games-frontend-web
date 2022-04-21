@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { MediaMatch } from './index';
 
 export default {
-  title: 'MediaMatch',
+  title: 'Components/MediaMatch',
   component: MediaMatch,
   parameters: {
     viewport: {

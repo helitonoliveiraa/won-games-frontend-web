@@ -3,7 +3,7 @@ import { ComponentMeta } from '@storybook/react';
 import { Heading } from './index';
 
 export default {
-  title: 'Heading',
+  title: 'Components/Heading',
   component: Heading,
   args: {
     children: 'Most popular',

@@ -3,7 +3,7 @@ import { ComponentMeta } from '@storybook/react';
 import { Menu } from './index';
 
 export default {
-  title: 'Menu',
+  title: 'Components/Menu',
   component: Menu,
   parameters: {
     layout: 'fullscreen',
