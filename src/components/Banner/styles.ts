@@ -1,12 +1,23 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
+import * as RibbonStyle from '../Ribbon/styles';
+
 type WrapperProps = {
   src: string;
 };
 
 export const Container = styled.section`
   position: relative;
+
+  ${media.lessThan('large')`
+    ${RibbonStyle.Container} {
+      right: 0;
+      &::before {
+        display: none;
+      }
+    }
+  `}
 
   ${media.greaterThan('medium')`
     box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);

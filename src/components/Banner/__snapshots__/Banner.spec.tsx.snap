@@ -69,6 +69,10 @@ exports[`<Banner/> should render correctly 1`] = `
   color: #F231A5;
 }
 
+@media (max-width:1170px) {
+
+}
+
 @media (min-width:768px) {
   .c0 {
     box-shadow: 0 0.4rem 0.4rem rgba(0,0,0,0.25);

@@ -1,5 +1,6 @@
 import { screen } from '@testing-library/react';
 
+import { Ribbon } from '../Ribbon';
 import { renderWithTheme } from '@/utils/tests/helpers';
 
 import { Banner } from './index';
@@ -24,5 +25,27 @@ describe('<Banner/>', () => {
       screen.getByRole('img', { name: /fake-title/i }),
     ).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render a Ribbon', () => {
+    renderWithTheme(
+      <Banner
+        {...bannerProps}
+        ribbonTitle="30% OFF"
+        ribbonSize="small"
+        ribbonColor="secondary"
+      />,
+    );
+
+    const ribbon = screen.getByText(/30% OFF/i);
+
+    expect(ribbon).toBeInTheDocument();
+    expect(ribbon).toHaveStyle({
+      background: '#3CD3C1',
+    });
+    expect(ribbon).toHaveStyle({
+      height: '2.4rem',
+      fontSize: '1rem',
+    });
   });
 });
