@@ -37,3 +37,33 @@ export type ButtonProps = ButtonTypes & {
   icon?: JSX.Element;
   as?: React.ElementType;
 };
+
+export type BannerProps = {
+  image: string;
+  title: string;
+  subtitle: string;
+  buttonLabel: string;
+  buttonLink: string;
+  ribbonTitle?: ReactNode;
+  ribbonColor?: RibbonColors;
+  ribbonSize?: RibbonSizes;
+};
+
+export type RibbonColors = 'primary' | 'secondary';
+export type RibbonSizes = 'default' | 'small' | 'large';
+
+export type RibbonProps = {
+  children: ReactNode;
+  color?: RibbonColors;
+  size?: RibbonSizes;
+};
+
+export type HighlightProps = {
+  title: string;
+  subtitle: string;
+  buttonLabel: string;
+  buttonLink: string;
+  backgroundImage: string;
+  floatImage?: string;
+  alignment?: 'left' | 'right';
+};
