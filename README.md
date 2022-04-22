@@ -22,6 +22,8 @@
   </a>
 </p>
 
+<h2 align="center">:construction:Project in development:construction:</h2>
+
 ## :memo: About
 
 This project is a development for I practice constructing an application using storybook, test with React Testing Library and to use the best practice for front-end development
@@ -37,3 +39,4 @@ This project is a development for I practice constructing an application using s
 - [commitlint]()
 - [commitizen]()
 
+<p align="center">🐧 going to the next level 🚀</p>
