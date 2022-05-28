@@ -1,4 +1,4 @@
-import ReactSlider, { Settings } from 'react-slick';
+import ReactSlider from 'react-slick';
 
 import { SliderProps } from '@/types';
 
