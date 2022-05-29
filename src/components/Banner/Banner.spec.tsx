@@ -1,7 +1,8 @@
 import { screen } from '@testing-library/react';
 
-import { Ribbon } from '../Ribbon';
 import { renderWithTheme } from '@/utils/tests/helpers';
+
+import { Ribbon } from '../Ribbon';
 
 import { Banner } from './index';
 

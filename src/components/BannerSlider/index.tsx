@@ -1,6 +1,7 @@
+import { BannerProps, SliderSettings } from '@/types';
+
 import { Banner } from '../Banner';
 import { Slider } from '../Slider';
-import { BannerProps, SliderSettings } from '@/types';
 
 import * as S from './styles';
 

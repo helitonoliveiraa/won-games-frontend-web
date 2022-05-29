@@ -1,6 +1,7 @@
+import { BannerProps } from '@/types';
+
 import { Button } from '../Button';
 import { Ribbon } from '../Ribbon';
-import { BannerProps } from '@/types';
 
 import * as S from './styles';
 
