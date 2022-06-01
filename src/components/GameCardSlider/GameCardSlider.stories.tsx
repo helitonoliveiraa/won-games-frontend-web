@@ -10,13 +10,13 @@ export default {
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'dark',
+      default: 'won-dark',
     },
   },
 } as ComponentMeta<typeof GameCardSlider>;
 
 export const Basic: typeof GameCardSlider = args => (
-  <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
+  <div style={{ maxWidth: '130rem', margin: '20px auto' }}>
     <GameCardSlider {...args} />
   </div>
 );
