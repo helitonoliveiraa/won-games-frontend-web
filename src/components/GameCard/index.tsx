@@ -1,9 +1,10 @@
 import { AiFillHeart } from 'react-icons/ai';
 import { FiHeart, FiShoppingCart } from 'react-icons/fi';
 
+import { GameCardProps } from '@/types';
+
 import { Button } from '../Button';
 import { Ribbon } from '../Ribbon';
-import { GameCardProps } from '@/types';
 
 import * as S from './styles';
 

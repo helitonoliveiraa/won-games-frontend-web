@@ -6,7 +6,7 @@ import { Basic as RibbonStories } from '../Ribbon/Ribbon.stories';
 import { GameCard } from './index';
 
 export default {
-  title: 'GameCard',
+  title: 'Components/GameCard',
   subcomponents: {
     Ribbon,
   },
