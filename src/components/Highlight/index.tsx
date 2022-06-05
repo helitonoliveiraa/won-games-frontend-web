@@ -1,5 +1,6 @@
-import { Button } from '../Button';
 import { HighlightProps } from '@/types';
+
+import { Button } from '../Button';
 
 import * as S from './styles';
 

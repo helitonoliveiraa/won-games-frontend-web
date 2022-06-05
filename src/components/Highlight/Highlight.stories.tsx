@@ -1,16 +1,13 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Highlight } from './index';
+import { item } from './mock';
 
 export default {
   title: 'Components/Highlight',
   component: Highlight,
   args: {
-    title: 'Read Dead está de de volta!',
-    subtitle: 'Venha conhecer as novas aventuras de John Marston',
-    buttonLabel: 'Buy now',
-    buttonLink: 'https://www.google.com',
-    backgroundImage: '/img/red-dead-img.png',
+    ...item,
   },
 } as ComponentMeta<typeof Highlight>;
 

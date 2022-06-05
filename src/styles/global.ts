@@ -1,6 +1,18 @@
-import { createGlobalStyle, css } from 'styled-components';
+import {
+  createGlobalStyle,
+  css,
+  DefaultTheme,
+  GlobalStyleComponent,
+} from 'styled-components';
 
-export default createGlobalStyle`
+type GlobalStyleProps = {
+  removeBg?: boolean;
+};
+
+const GlobalStyle: GlobalStyleComponent<
+  GlobalStyleProps,
+  DefaultTheme
+> = createGlobalStyle`
   /* poppins-300 - latin */
   @font-face {
     font-family: 'Poppins';
@@ -44,6 +56,11 @@ export default createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
   }
 
   html {
@@ -56,10 +73,15 @@ export default createGlobalStyle`
     height: -webkit-fill-available;
   }
 
-  ${({ theme }) => css`
+  ${({ theme, removeBg }) => css`
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
+
+      ${!removeBg &&
+      css`
+        background-color: ${theme.colors.mainBg};
+      `}
     }
   `}
 
@@ -69,3 +91,5 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 `;
+
+export default GlobalStyle;
