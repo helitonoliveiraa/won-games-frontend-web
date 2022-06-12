@@ -4,6 +4,10 @@ import media from 'styled-media-query';
 import * as HeadingStyles from '@/components/Heading/styles';
 
 export const Container = styled.footer`
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
   ${HeadingStyles.Container} {
     text-transform: uppercase;
   }

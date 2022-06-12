@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { FiSearch, FiAlignLeft, FiShoppingCart, FiX } from 'react-icons/fi';
 
+import { Logo } from '@/components/Logo';
+
 import { Button } from '../Button';
 import { MediaMatch } from '../MediaMatch';
-import { Logo } from '@/components/Logo';
 
 import * as S from './styles';
 

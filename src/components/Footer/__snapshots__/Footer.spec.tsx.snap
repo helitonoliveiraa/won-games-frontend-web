@@ -23,6 +23,12 @@ exports[`<Footer/> should render 4 columns topics 1`] = `
   height: 3rem;
 }
 
+.c0 {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .c0 .c4 {
   text-transform: uppercase;
 }

@@ -6,7 +6,7 @@ export function Heading({
   children,
   color = 'white',
   lineLeft = false,
-  lineBottom = 'default',
+  lineBottom = 'none',
   size = 'medium',
   lineColor = 'primary',
 }: HeadingProps) {

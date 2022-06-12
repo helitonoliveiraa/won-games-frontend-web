@@ -21,7 +21,7 @@ export const Container = styled.menu`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
-    padding: ${theme.spacings.xsmall};
+    padding: ${theme.spacings.xsmall} 0;
     position: relative;
 
     button {

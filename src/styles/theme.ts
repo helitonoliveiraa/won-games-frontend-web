@@ -1,6 +1,6 @@
 export default {
   grid: {
-    container: '130rem',
+    container: '104rem',
     gutter: '3.2rem',
   },
   border: {
@@ -36,6 +36,7 @@ export default {
     lightPink: '#f062c0',
     darkPink: '#d958a6',
     mainBg: '#06092B',
+    lightBg: '#F2F2F2',
     white: '#FAFAFA',
     shimmerPrimary: '#f6f7f8',
     shimmerSecondary: '#edeef1',

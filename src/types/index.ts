@@ -3,6 +3,9 @@ import React, {
   ButtonHTMLAttributes,
   AnchorHTMLAttributes,
 } from 'react';
+import { Settings } from 'react-slick';
+
+/** COMPONENTS TYPES */
 
 type ButtonTypes =
   | ButtonHTMLAttributes<HTMLButtonElement>
@@ -49,7 +52,7 @@ export type BannerProps = {
   ribbonSize?: RibbonSizes;
 };
 
-export type RibbonColors = 'primary' | 'secondary';
+export type RibbonColors = 'primary' | 'secondary' | 'lightOrange';
 export type RibbonSizes = 'default' | 'small' | 'large';
 
 export type RibbonProps = {
@@ -66,4 +69,42 @@ export type HighlightProps = {
   backgroundImage: string;
   floatImage?: string;
   alignment?: 'left' | 'right';
+};
+
+export type GameCardProps = {
+  image: string;
+  title: string;
+  developer: string;
+  price: string;
+  promotionalPrice?: string;
+  favorite?: boolean;
+  onFavorite?: () => void;
+  ribbonTitle?: ReactNode;
+  ribbonColor?: RibbonColors;
+  ribbonSize?: RibbonSizes;
+};
+
+export type SliderSettings = Settings;
+
+export type SliderProps = {
+  children: React.ReactNode;
+  settings: SliderSettings;
+};
+
+export type GameCardSliderProps = {
+  items: GameCardProps[];
+  arrowColor?: 'white' | 'black';
+};
+
+/** TEMPLATE TYPES */
+export type HomeTemplateProps = {
+  banners: BannerProps[];
+  newGames: GameCardProps[];
+  mostPopularHighlight: HighlightProps;
+  mostPopularGames: GameCardProps[];
+  upcomingGames: GameCardProps[];
+  upcomingHighlight: HighlightProps;
+  upcomingMoreGames: GameCardProps[];
+  freeHighlight: HighlightProps;
+  freeGames: GameCardProps[];
 };

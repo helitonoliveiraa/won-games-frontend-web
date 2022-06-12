@@ -1,7 +1,7 @@
 import { ComponentMeta } from '@storybook/react';
 
-import { items } from './bannerItems.json';
 import { BannerSlider } from './index';
+import { items } from './mock';
 
 export default {
   title: 'Components/BannerSlider',
