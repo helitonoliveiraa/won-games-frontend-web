@@ -41,3 +41,6 @@ public/workbox-*.js
 
 # Storybook static files
 storybook-static
+
+# TS build info (typecheck)
+tsconfig.tsbuildinfo

@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky install",
     "test": "jest --verbose",
     "test:watch": "jest --watch --verbose",
@@ -17,6 +18,7 @@
     "src/**/*.{ts,tsx}": [
       "yarn lint --fix",
       "yarn prettier --write",
+      "yarn typecheck",
       "yarn test --findRelatedTests --bail"
     ]
   },
