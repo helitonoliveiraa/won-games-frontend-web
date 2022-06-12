@@ -2,6 +2,7 @@ import React, {
   ReactNode,
   ButtonHTMLAttributes,
   AnchorHTMLAttributes,
+  InputHTMLAttributes,
 } from 'react';
 import { Settings } from 'react-slick';
 
@@ -95,6 +96,15 @@ export type SliderProps = {
 export type GameCardSliderProps = {
   items: GameCardProps[];
   arrowColor?: 'white' | 'black';
+};
+
+export type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  labelFor?: string;
+  labelColor?: 'white' | 'black';
+  value?: string | ReadonlyArray<string> | number | undefined;
+  onCheck?: (status: boolean) => void;
+  isChecked?: boolean;
 };
 
 /** TEMPLATE TYPES */
