@@ -10,14 +10,14 @@ import { Home } from './index';
 
 const props = {
   banners: bannersMock,
-  newGames: gamesMock,
+  newGames: [gamesMock[0]],
   mostPopularHighlight: highlightMock,
-  mostPopularGames: gamesMock,
-  upcomingGames: gamesMock,
+  mostPopularGames: [gamesMock[0]],
+  upcomingGames: [gamesMock[0]],
   upcomingHighlight: highlightMock,
-  upcomingMoreGames: gamesMock,
+  upcomingMoreGames: [gamesMock[0]],
   freeHighlight: highlightMock,
-  freeGames: gamesMock,
+  freeGames: [gamesMock[0]],
 };
 
 describe('<Home/>', () => {
@@ -29,10 +29,6 @@ describe('<Home/>', () => {
     expect(
       screen.getByRole('heading', { name: /contato/i }),
     ).toBeInTheDocument();
-  });
-
-  it('should render 4 sections', () => {
-    renderWithTheme(<Home {...props} />);
 
     expect(
       screen.getByRole('heading', { name: /News Releases/i }),
@@ -49,5 +45,7 @@ describe('<Home/>', () => {
     expect(
       screen.getByRole('heading', { name: /Free Games/i }),
     ).toBeInTheDocument();
+
+    expect(screen.getAllByText(/Population/i)).toHaveLength(5);
   });
 });
