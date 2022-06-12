@@ -7,10 +7,17 @@ export function Button({
   children,
   size = 'medium',
   fullWidth = false,
+  minimal = false,
   ...props
 }: ButtonProps) {
   return (
-    <S.Container size={size} fullWidth={fullWidth} hasIcon={!!icon} {...props}>
+    <S.Container
+      size={size}
+      fullWidth={fullWidth}
+      hasIcon={!!icon}
+      minimal={minimal}
+      {...props}
+    >
       {icon}
       {!!children && <span>{children}</span>}
     </S.Container>

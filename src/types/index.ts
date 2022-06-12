@@ -37,6 +37,7 @@ export type ButtonProps = ButtonTypes & {
   children?: ReactNode;
   size?: 'small' | 'medium' | 'large';
   fullWidth?: boolean;
+  minimal?: boolean;
   icon?: JSX.Element;
   as?: React.ElementType;
 };
