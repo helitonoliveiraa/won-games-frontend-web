@@ -24,7 +24,7 @@ export const items = [
     promotionalPrice: 'R$ 202,50',
   },
   {
-    title: ' Crazy Gun',
+    title: 'Crazy Gun',
     developer: 'Rockstar Games',
     image:
       'https://images.unsplash.com/photo-1606167668584-78701c57f13d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',

@@ -1,8 +1,12 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
-  ${({ theme }) => css`
-    max-width: ${theme.grid.container};
+type ContainerProps = {
+  full?: boolean;
+};
+
+export const Container = styled.div<ContainerProps>`
+  ${({ theme, full }) => css`
+    max-width: ${full ? theme.grid.container : '104rem'};
     width: 100%;
     margin-left: auto;
     margin-right: auto;

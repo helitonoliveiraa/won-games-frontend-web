@@ -4,8 +4,8 @@ import { render, screen } from '@testing-library/react';
 import theme from '@/styles/theme';
 import { renderWithTheme } from '@/utils/tests/helpers';
 
-import { items } from './gameCards.json';
 import { GameCardSlider } from './index';
+import { items } from './mock';
 
 describe('<GameCardSlider/>', () => {
   it('should render vertical carousel', () => {

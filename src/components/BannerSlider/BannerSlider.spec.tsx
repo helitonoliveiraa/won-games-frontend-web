@@ -1,10 +1,10 @@
 import 'match-media-mock';
-import { getByRole, render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
 import { renderWithTheme } from '@/utils/tests/helpers';
 
-import { items } from './bannerItems.json';
 import { BannerSlider } from './index';
+import { items } from './mock';
 
 describe('<BannerSlider/>', () => {
   it('should render a vertical slide', () => {

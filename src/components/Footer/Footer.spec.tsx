@@ -4,15 +4,6 @@ import { renderWithTheme } from '@/utils/tests/helpers';
 
 import { Footer } from './index';
 
-/**
- * Verify if exists the below columns
- *
- * contact
- * follow us
- * locale
- * links
- */
-
 describe('<Footer/>', () => {
   it('should render 4 columns topics', () => {
     const { container } = renderWithTheme(<Footer />);

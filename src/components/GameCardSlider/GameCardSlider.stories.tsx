@@ -1,7 +1,7 @@
 import { ComponentMeta } from '@storybook/react';
 
-import { items } from './gameCards.json';
 import { GameCardSlider } from './index';
+import { items } from './mock';
 
 export default {
   title: 'Components/GameCardSlider',

@@ -2,6 +2,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 
 import { screen } from '@testing-library/react';
 
+import theme from '@/styles/theme';
 import { renderWithTheme } from '@/utils/tests/helpers';
 
 import { Button } from './index';
@@ -55,6 +56,27 @@ describe('<Button/>', () => {
       screen.getByRole('button', { name: /buy now/i }),
     ).toBeInTheDocument();
     expect(screen.getByTestId('icon')).toBeInTheDocument();
+  });
+
+  it('should render a minimal version', () => {
+    renderWithTheme(
+      <Button icon={<FiShoppingCart data-testid="icon" />} minimal>
+        Wish list
+      </Button>,
+    );
+
+    expect(screen.getByRole('button', { name: /wish list/i })).toHaveStyle({
+      background: 'transparent',
+      color: theme.colors.primary,
+    });
+
+    expect(screen.getByRole('button', { name: /wish list/i })).toHaveStyleRule(
+      'background',
+      'transparent',
+      {
+        modifier: ':hover',
+      },
+    );
   });
 
   it('should render button as a link', () => {

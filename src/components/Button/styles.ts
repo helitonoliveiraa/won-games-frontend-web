@@ -1,10 +1,11 @@
+import { darken } from 'polished';
 import styled, { css, DefaultTheme } from 'styled-components';
 
 import { ButtonProps } from '@/types';
 
 type ContainerProps = { hasIcon: boolean } & Pick<
   ButtonProps,
-  'size' | 'fullWidth'
+  'size' | 'fullWidth' | 'minimal'
 >;
 
 const ContainerModifiers = {
@@ -24,6 +25,16 @@ const ContainerModifiers = {
   `,
   fullWidth: () => css`
     width: 100%;
+    border: none;
+  `,
+  minimal: (theme: DefaultTheme) => css`
+    background: transparent;
+    color: ${theme.colors.primary};
+
+    &:hover {
+      background: transparent;
+      color: ${darken(0.1, theme.colors.primary)};
+    }
   `,
   widthIcon: (theme: DefaultTheme) => css`
     svg {
@@ -38,7 +49,7 @@ const ContainerModifiers = {
 };
 
 export const Container = styled.button<ContainerProps>`
-  ${({ theme, size, fullWidth, hasIcon }) => css`
+  ${({ theme, size, fullWidth, hasIcon, minimal }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -58,5 +69,6 @@ export const Container = styled.button<ContainerProps>`
     ${!!size && ContainerModifiers[size](theme)};
     ${fullWidth && ContainerModifiers.fullWidth()}
     ${hasIcon && ContainerModifiers.widthIcon(theme)}
+    ${!!minimal && ContainerModifiers.minimal(theme)}
   `}
 `;

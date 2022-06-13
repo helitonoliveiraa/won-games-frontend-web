@@ -1,6 +1,6 @@
 name: ci
-on: 
-  pull_request: 
+on:
+  pull_request:
     types: [opened, synchronize, reopened, edited]
 
 jobs:
@@ -20,6 +20,9 @@ jobs:
 
       - name: Linting
         run: yarn lint
+
+      - name: Typecheck
+        run: yarn typecheck
 
       - name: Test
         run: yarn test

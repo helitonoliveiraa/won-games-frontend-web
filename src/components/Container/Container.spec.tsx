@@ -1,5 +1,3 @@
-import { render, screen } from '@testing-library/react';
-
 import theme from '@/styles/theme';
 import { renderWithTheme } from '@/utils/tests/helpers';
 
@@ -20,7 +18,7 @@ describe('<Container/>', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
-        max-width: 130rem;
+        max-width: 104rem;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
