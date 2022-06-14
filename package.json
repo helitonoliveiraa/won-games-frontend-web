@@ -22,7 +22,7 @@
     ]
   },
   "dependencies": {
-    "@commitlint/cli": "^16.2.3",
+    "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^16.2.1",
     "@types/styled-components": "^5.1.24",
     "next": "12.1.6",
@@ -41,7 +41,7 @@
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.4.22",
-    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^14.2.0",
     "@types/jest": "^27.4.1",
