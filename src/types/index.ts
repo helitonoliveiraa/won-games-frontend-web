@@ -107,6 +107,16 @@ export type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
   isChecked?: boolean;
 };
 
+type RadioValue = string | ReadonlyArray<string> | number;
+
+export type RadioProps = InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  labelFor?: string;
+  labelColor?: 'white' | 'black';
+  value?: RadioValue;
+  onCheck?: (value?: RadioValue) => void;
+};
+
 /** TEMPLATE TYPES */
 export type HomeTemplateProps = {
   banners: BannerProps[];
