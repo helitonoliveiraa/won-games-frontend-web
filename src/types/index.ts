@@ -117,6 +117,18 @@ export type RadioProps = InputHTMLAttributes<HTMLInputElement> & {
   onCheck?: (value?: RadioValue) => void;
 };
 
+type TextBox = string | ReadonlyArray<string> | number | undefined;
+
+export type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  labelFor?: string;
+  initialValue?: string;
+  onInput?: (newText: TextBox) => void;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
+  disabled?: boolean;
+};
+
 /** TEMPLATE TYPES */
 export type HomeTemplateProps = {
   banners: BannerProps[];
