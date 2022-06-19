@@ -44,6 +44,8 @@ export default {
     dark: '#000',
     lightGray: '#EAEAEA',
     middleGray: '#BBBBBB',
+    middleGray1: '#B5B5B5',
+    middleGray2: '#969696',
     gray: '#8F8F8F',
     darkGray: '#2E2F42',
   },
